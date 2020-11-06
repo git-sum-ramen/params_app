@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get "/query_params" => "example_pages#query"
 
     get "/name" => "games#tell_name"
+    get "/guess_a_number" => "games#number"
   end
 end
