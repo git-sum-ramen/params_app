@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
     get "/name" => "games#tell_name"
     get "/guess_a_number" => "games#number"
-    get "/guess_segment/:number" => "games#segment_number"
+    get "/guess_segment/:guess" => "games#number"
   end
 end
