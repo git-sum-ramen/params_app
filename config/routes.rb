@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
   namespace :api do
     get "/query_params" => "example_pages#query"
+    get "/url_segment_parameter/:vehicle" => "example_pages#segment"
 
     get "/name" => "games#tell_name"
     get "/guess_a_number" => "games#number"
+
   end
 end
