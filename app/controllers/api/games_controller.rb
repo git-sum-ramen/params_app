@@ -13,11 +13,13 @@ class Api::GamesController < ApplicationController
   def number
     # get user input from params
     p params[:guess].class
-    # see if that number is higher or lower than the "answer"
+    @guess = params[:guess].to_i
+    correct_answer = 36
+    # see if that number is higher or lower than the "correct_answer"
 
-    if params[:guess].to_i > 36
+    if @guess > correct_answer
       @message = "you guessed too high"
-    elsif params[:guess].to_i < 36
+    elsif @guess < correct_answer
       @message = "you guessed too low"
     else
       @message = "you guessed correctly"
