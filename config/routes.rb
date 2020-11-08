@@ -11,5 +11,8 @@ Rails.application.routes.draw do
     get "/name" => "games#tell_name"
     get "/guess_a_number" => "games#number"
     get "/guess_segment/:guess" => "games#number"
+    post "/guess_a_number" => "games#number"
+    post "/weird_route" => "games#strange"
+
   end
 end
