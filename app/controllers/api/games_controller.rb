@@ -29,11 +29,10 @@ class Api::GamesController < ApplicationController
   end
 
   def strange
-    @message = "Invalid Credentials"
-    if params[:username] == "hugh" 
-      if params[:password] == "swordfish"
-        @message = "Valid credentials"
-      end
+    if params[:username] == "hugh" && params[:password] == "swordfish"
+      @message = "Valid credentials"
+    else
+      @message = "Invalid Credentials"
     end
     render 'weird.json.jb'
   end
