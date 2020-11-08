@@ -15,4 +15,13 @@ class Api::ExamplePagesController < ApplicationController
     @sentence = "You drive a #{@vehicle}"   
     render 'segment.json.jb'
   end
+
+  def body
+    if params[:ssn].length == 9
+      @message = "you typed it in correctly"
+    else
+      @message = "give me the real ssn"
+    end
+    render 'body.json.jb'
+  end
 end
